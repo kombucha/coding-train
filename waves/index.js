@@ -18,7 +18,7 @@ function setup() {
 
   for (let y of range(startY, endY, yStep)) {
     const [startX, endX] = computeCircleSegment(circleCenter, CIRCLE_RADIUS, y);
-    const waviness = ceil(map(y, startY, endY, -MAX_WAVINESS, MAX_WAVINESS));
+    const waviness = ceil(map(abs(y), 0, endY, 1, MAX_WAVINESS));
     const maxAmplitude = 8;
     const direction = y < 0 ? -1 : 1;
     lines.push(
@@ -62,7 +62,7 @@ class WaveLine {
     this.direction = direction > 0 ? 1 : -1;
 
     this.amplitude = 0;
-    this.lineStep = round(map(abs(waviness), 1, MAX_WAVINESS, 8, 2));
+    this.lineStep = round(map(waviness, 1, MAX_WAVINESS, 10, 2));
     this.color = "#fff";
   }
   update() {
