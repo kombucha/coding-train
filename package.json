@@ -5,9 +5,10 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "browser-sync": "2.18.13",
-    "eslint": "4.11.0",
-    "eslint-config-p5js": "1.0.1"
+    "browser-sync": "2.23.1",
+    "eslint": "4.14.0",
+    "eslint-config-p5js": "1.0.1",
+    "prettier": "1.9.2"
   },
   "scripts": {
     "start":
