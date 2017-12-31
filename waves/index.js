@@ -84,6 +84,7 @@ class WaveLine {
       const y = this.y + map(waveY, -1, 1, -this.amplitude, this.amplitude);
       vertex(x, y);
     }
+    vertex(this.endX, this.y);
     endShape();
   }
 }
